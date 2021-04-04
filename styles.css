@@ -1,0 +1,126 @@
+
+body {
+
+    transition: background-color 0.5s;
+
+    margin: 0; padding: 0;
+    /* position: relative; */
+    width: 100vw; height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+span.progress {
+
+    display: block;
+
+    padding: 0; margin: 0;
+    position: absolute;
+
+    height: 5px;
+    color: red;
+
+    bottom: 0;
+    left: 0;
+
+    font-size: 1px;
+
+    z-index: 999;
+
+}
+
+div.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 5px);
+}
+
+body.over {
+    background-color: #CA2E55;
+}
+
+body.counting {
+    background-color: #18F2B2;
+}
+
+h1.time {
+    font-size: 5rem;
+    margin: 10px 0;
+    font-variant-numeric: tabular-nums slashed-zero;
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+body.over h1.time {
+
+    animation: blink 1s infinite;
+    color: white;
+
+}
+
+div.progress {
+    background-color: #CA2E55;
+    border-radius: 3px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 0;
+
+    transition: width 0.25s, height 0.25s;
+}
+
+a.btn {
+    display: block;
+    margin: 10px 0;
+    padding: 7px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+
+    background-color: #1B1B3A;
+}
+
+a.btn.reset {
+    background-color: #F9C80E;
+    color: black;
+    display: none;
+}
+
+footer {
+
+    transition: margin-top 0.25s, margin-bottom 0.25s;
+
+    margin-top: 25px;
+    margin-bottom: -25px;
+}
+
+body.over footer {
+    margin-top: 15px;
+    margin-bottom: -15px;
+}
+
+footer p {
+    font-size: 0.8rem;
+    max-width: fit-content;
+}
+
+label {
+    font-size: 0.9rem;
+}

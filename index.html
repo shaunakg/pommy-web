@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Pommy</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script>
+        require('electron-titlebar');
+    </script>
+
+</head>
+
+<body>
+
+    <div id="electron-titlebar" class="drag"></div>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <h1 class="time" id="time">25:00</h1>
+
+            <div class="progress" id="progress"></div>
+
+            <div class="buttons" id="buttons"></div>
+
+            <a class="btn reset" href="#" onclick="location.reload()" id="reset">Reset timer</a>
+
+            <label>
+                <input type="checkbox" id="play" checked>
+                Play a <a href="#" onclick="new Audio(config.end_audio).play()">sound</a> when finished?
+            </label>
+
+            <footer>
+
+                <p>
+                    Pommy is copyright © <span id="year">2021</span> Shaunak G
+                </p>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
